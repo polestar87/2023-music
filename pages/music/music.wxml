@@ -1,0 +1,20 @@
+<!--pages/music/music.wxml-->
+<swiper indicator-dots indicator-color="#fff" indicator-active-color="red" autoplay interval="3000" circular>
+  <swiper-item wx:for="{{swiperList}}">
+    <image src="{{item}}" mode="" />
+  </swiper-item>
+</swiper>
+<view class="grid-box">
+  <van-grid>
+    <van-grid custom-class="grid" column-num="5" square border="{{false}}" icon-size="60rpx">
+      <van-grid-item icon="{{item.path}}" text="{{item.name}}" wx:for="{{ gridList }}" />
+    </van-grid>
+  </van-grid>
+</view>
+<view class="title">热门歌手</view>
+<view class="hot-box">
+  <view class="hot-item" wx:for="{{10}}">
+    <image src="https://p2.music.126.net/78q0jUUJ0h08GxAs2G-tCA==/109951168529051968.jpg" mode="aspectFill" />
+    <view class="name">林俊杰</view>
+  </view>
+</view>
